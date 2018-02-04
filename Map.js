@@ -7,13 +7,18 @@ console.log("testing");
  var x ="Who let the dogs out? who? Who? Who?"
 
  var input = x.toLowerCase();
- var arrayOfWords = input.replace(/\.$/, "").split(/[!?,: .]+/);
+ var arrayOfWords = input.replace(/\?$/, "").split(/[!?,: .]+/);
  var mapOfWords = new Object();
- arrayOfWords.forEach(function (key) {
- if (mapOfWords.hasOwnProperty(key)) {
- mapOfWords[key]++;
- } else {
- mapOfWords[key] = 1;
- }
- });
- console.log(mapOfWords);
+
+for(var i=0; i<arrayOfWords.length; ++i)
+{
+   var key =arrayOfWords[i];
+     if (mapOfWords.hasOwnProperty(key)) {
+     mapOfWords[key]++;
+     }
+   else {
+     mapOfWords[key] = 1;
+    }
+
+}
+   console.log(mapOfWords);
