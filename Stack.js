@@ -4,11 +4,11 @@ function MyStack(){
   this.array=[];
 }
 
-MyStack.prototype.add= function(data){
+MyStack.prototype.push= function(data){
   this.array.push(data);
 }
 
-MyStack.prototype.remove=function(){
+MyStack.prototype.pop=function(){
   return this.array.pop();
 }
 
@@ -26,13 +26,13 @@ MyStack.prototype.print=function(){
 
 
 var stack1 = new MyStack;
-stack1.add(4);
-stack1.add(8);
-stack1.add(2);
-stack1.add(9);
+stack1.push(4);
+stack1.push(8);
+stack1.push(2);
+stack1.push(9);
 console.log(stack1);
 
-console.log(stack1.remove());
+console.log(stack1.pop());
 console.log(stack1.peek());
 
 console.log(stack1.size());
